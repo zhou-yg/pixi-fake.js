@@ -17,6 +17,9 @@ class Container {
   addChildAt(c,i){
     this.children.splice(i,0,c);
   }
+  removeChildAt(i){
+    this.children.splice(i,1);
+  }
 }
 
 
