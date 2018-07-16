@@ -7,18 +7,21 @@ var n=0;
 
 class Container {
   constructor(props) {
-    this.name = n++;
-    this.props = props;
+    this.name = `pixi-fake-${n++}`;
     this.children = [];
   }
   addChild(c){
-    this.children.push(c)
+    this.children.push(c);
+    c.parent = this;
+  }
+  removeChildAt(i){
+    this.children.splice(i, 1);
   }
   addChildAt(c,i){
     this.children.splice(i,0,c);
   }
-  removeChildAt(i){
-    this.children.splice(i,1);
+  getChildIndex(c){
+    return this.children.indexOf(c);
   }
 }
 
