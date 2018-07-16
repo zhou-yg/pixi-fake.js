@@ -5,7 +5,10 @@
 
 var n=0;
 
-class Container {
+class DisplayObject {
+}
+
+class Container extends DisplayObject{
   constructor(props) {
     this.name = `pixi-fake-${n++}`;
     this.children = [];
@@ -25,11 +28,12 @@ class Container {
   }
 }
 
-class Sprite {
+class Sprite extends Container {
 
 }
 
 module.exports = {
+  DisplayObject,
   Container,
   Sprite,
 }
