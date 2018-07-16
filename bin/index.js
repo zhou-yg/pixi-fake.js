@@ -10,6 +10,7 @@ class DisplayObject {
 
 class Container extends DisplayObject{
   constructor(props) {
+    super(props);
     this.name = `pixi-fake-${n++}`;
     this.children = [];
   }
