@@ -22,7 +22,11 @@ class Container {
   }
 }
 
+class Sprite {
+
+}
 
 module.exports = {
   Container,
+  Sprite,
 }
